@@ -13,12 +13,12 @@ function filterForm($form, $data)
     $filterdata = $data;
     foreach($data as $key => $value)
     {
-        if(is_array($form[$key]["filters"])){
+        if(!empty($form[$key]["filters"])){
             if (in_array("striptrim", $form[$key]["filters"])) {
-                $filterdata[$key]= trim($form[$key]);
+                $filterdata[$key]= trim($filterdata[$key]);
             }
             if (in_array("striptags", $form[$key]["filters"])) {
-                $filterdata[$key]= strip_tags($form[$key]);
+                $filterdata[$key]= strip_tags($filterdata[$key]);
             }
         }
     }
