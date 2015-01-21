@@ -1,7 +1,11 @@
 <?php
+/**
+ * 
+ * @param unknown $valor
+ */
 
-
-function dibujaArray($valor){
+function dibujaArray($valor)
+{
     foreach ($valor as $result){
         echo ($result);
     }
